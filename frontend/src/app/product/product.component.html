@@ -1,0 +1,21 @@
+
+<div class="custom-container mt-10" style="margin-top: 100px;">
+    <h3 class="text-center">{{ categoryName }}</h3>
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of dataProduct">
+        <div class="custom-card">
+          <img [src]="product.product_image" class="custom-card-img-top" alt="{{ product.product_name }}">
+          <div class="custom-card-body">
+            <h5 class="custom-card-title">{{ product.product_name }}</h5>
+            <p class="custom-card-text">{{ product.product_price }}</p>
+            <button class="custom-btn-block" (click)="addToCart(product)">
+              Thêm vào giỏ hàng
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <app-footer></app-footer>
+  

@@ -1,0 +1,26 @@
+.custom-container {
+  .product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff4d4d;
+    margin-top: 10px;
+  }
+
+  .product-desc {
+    margin: 20px 0;
+    line-height: 1.6;
+  }
+
+  .custom-btn-block {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

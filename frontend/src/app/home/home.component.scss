@@ -1,0 +1,135 @@
+
+/* Container cho tất cả sản phẩm */
+.custom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Căn chỉnh từng card sản phẩm */
+.custom-card {
+  position: relative;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+/* Phần hình ảnh */
+.custom-card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Phần thông tin bên trong card */
+.custom-card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.custom-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.custom-card-text {
+  font-size: 1rem;
+  color: #d14739;
+  margin-bottom: 15px;
+}
+
+/* Nhãn sale */
+.sale-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+/* Nút "Thêm vào giỏ hàng" */
+.custom-btn-block {
+  background-color: #d14739;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.custom-btn-block:hover {
+  background-color: #d14739;
+}
+
+/* Điều chỉnh layout khi màn hình nhỏ */
+@media (max-width: 767px) {
+  .custom-card {
+    margin-bottom: 15px;
+  }
+
+  .custom-container {
+    padding: 0;
+  }
+
+  .custom-card-img-top {
+    height: 200px;
+  }
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: center; /* Căn giữa phần tử chính */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 20px; /* Khoảng cách giữa các phần tử */
+  padding: 40px 20px; /* Thêm khoảng cách bên trong */
+  background-color: #f4f4f4; /* Màu nền nhẹ nhàng */
+  border-radius: 20px; /* Bo góc khung chứa */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+.feedback-card {
+  flex: 1 1 200px; /* Đảm bảo tất cả các thẻ có kích thước cân đối */
+  max-width: 250px; /* Giới hạn kích thước lớn nhất của thẻ */
+  background-color: #fff; /* Màu nền thẻ */
+  border-radius: 15px; /* Bo góc mềm mại */
+  overflow: hidden; /* Cắt nội dung tràn */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+  transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng mượt khi hover */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+.feedback-card:hover {
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
+}
+
+.feedback-card img {
+  width: 100%; /* Ảnh chiếm toàn bộ chiều rộng thẻ */
+  height: auto; /* Tự động điều chỉnh chiều cao */
+  border-bottom: 5px solid #f4f4f4; /* Đường phân cách ảnh với nội dung */
+}
+
+.feedback-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase; /* Viết hoa toàn bộ chữ */
+  letter-spacing: 3px; /* Tăng khoảng cách giữa các chữ */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng bóng chữ */
+}

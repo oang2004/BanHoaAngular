@@ -1,0 +1,50 @@
+<div class="shopping-cart " style="margin-top: 100px;">
+  <h1>Giỏ Hàng</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Xóa</th>
+        <th>Hình Ảnh</th>
+        <th>Tên Sản Phẩm</th>
+        <th>Chỉnh Sửa</th>
+        <th>Cập Nhật</th>
+        <th>Đơn Giá</th>
+        <th>Số Lượng</th>
+        <th>Thành Tiền</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems">
+        <td>
+          <button (click)="deleteFromCart(item)">
+            Xóa
+          </button>
+        </td>
+        <td>
+          <img [src]="item.product_image" alt="{{item.product_name}}" />
+        </td>
+        <td>{{ item.product_name }}</td>
+        <td>
+          <button (click)="editItem(item)">Edit</button>
+        </td>
+        <td>
+          <button (click)="updateSubtotal(item)">Update</button>
+        </td>
+        <p class="custom-card-text" style="margin-top: 38px;">{{ item.product_price }}</p>
+        <td>
+          <input type="number" [(ngModel)]="item.quantity" (change)="updateSubtotal(item)" />
+        </td>
+        <td>{{ item.subtotal.toLocaleString() }}VND</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="total-amount">
+    <h3>Tổng Tiền:</h3>
+    <div class="amount">{{ totalAmount.toLocaleString() }}VND</div>
+  </div>
+  <div class="cart-actions">
+    <button routerLink="/product">Tiếp tục mua hàng</button>
+    <button (click)="clearCart()">Xóa sản phẩm trong giỏ hàng</button>
+    <button (click)="checkout()">Đặt hàng</button>
+  </div>
+</div>

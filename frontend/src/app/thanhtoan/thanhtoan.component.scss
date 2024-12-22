@@ -1,0 +1,109 @@
+/* Định dạng cho form container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Định dạng cho tiêu đề form */
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Định dạng cho các row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Định dạng cho mỗi cột input */
+  .col-md-6 {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  /* Định dạng cho label */
+  label {
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 8px;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Định dạng cho input */
+  input.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Thay đổi màu sắc khi focus vào input */
+  input.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    background-color: #fff;
+  }
+  
+  /* Định dạng cho button */
+  button.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 18px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Hiệu ứng khi hover vào button */
+  button.btn-primary:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Hiệu ứng cho lỗi khi người dùng nhập sai */
+  input.ng-invalid.ng-touched {
+    border-color: #e74c3c;
+    background-color: #f2dede;
+  }
+  
+  input.ng-invalid.ng-touched:focus {
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.4);
+  }
+  
+  /* Định dạng cho các thông báo lỗi */
+  .ng-invalid.ng-touched {
+    border-color: #e74c3c;
+  }
+  
+  /* Định dạng cho các lỗi text */
+  .error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+  

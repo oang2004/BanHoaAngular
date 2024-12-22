@@ -1,0 +1,40 @@
+<div class="my_account_page_area" style="margin-top: 100px;">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="jumbotron">
+                  <div class="card card-container">
+                      <div class="tab">
+                          <button routerLink="/login">Đăng nhập</button>
+                          <button routerLink="/register">Đăng ký</button>
+                      </div>
+                      <form *ngIf="isLoginTab" (ngSubmit)="onSubmit()">
+                          <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="email" class="form-control" id="email" [(ngModel)]="form.email" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required /> 
+                          </div>
+                          <div class="form-group">
+                            <label for="password">Mật khẩu</label>
+                            <div class="input-group">
+                              <input [type]="isPasswordVisible ? 'text' : 'password'" class="form-control" id="password" [(ngModel)]="form.password" name="password" required />
+                              <div class="input-group-append">
+                                <button type="button" class="btn btn-outline-secondary" (click)="togglePasswordVisibility()">
+                                  <i class="fa" [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'"></i>
+                                </button>
+                              </div>
+                            </div>
+                        </div>
+                          <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                          <div *ngIf="isLoginFailed" class="alert alert-danger">
+                              {{ errorMessage }}
+                          </div>
+                          <button type="button" class="btn btn-link" (click)="forgotPassword()">Quên mật khẩu?</button>
+                      </form>
+
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

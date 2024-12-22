@@ -1,0 +1,59 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<header>
+  <div class="logo">Flower</div>
+  <nav>
+    <ul class="nav-links">
+      <li><a routerLink="/home">Trang Chủ</a></li>
+      <li>
+        <a [routerLink]="['/product']" [queryParams]="{ category: 'Tất cả', categoryID: 0}">Các Loại Hoa</a>
+        <ul>
+          <li *ngFor="let loai of data"  (click)="onItemClick(loai.category_id)">
+           <a [routerLink]="['/product']" [queryParams]="{ category: loai.category_name, categoryID: loai.category_id}">{{ loai.category_name }}</a>  <!-- Hoặc thuộc tính bạn muốn hiển thị -->
+          </li>
+        </ul>
+      </li>
+      <li><a routerLink="/about">Về Chúng Tôi</a></li>
+    </ul>
+  </nav>
+  <div class="icons">
+    <div class="flex items-center space-x-4">
+      <form (ngSubmit)="onSearch()">
+        <input 
+          type="text" 
+          [(ngModel)]="timkiem" 
+          name="search" 
+          placeholder="Tìm kiếm..." 
+          class="search-input" 
+        />
+        <button type="submit" class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <a routerLink="/cart" class="relative text-black">
+        <i class="fas fa-shopping-cart"></i>
+        <span *ngIf="cartItemCount > 0" class="cart-count">{{ cartItemCount }}</span>
+      </a>
+
+      <ng-container *ngIf="isLoggedIn; else notLoggedIn">
+        <div class="dropdown">
+            <i class="fas fa-user" routerLink="/login"></i> {{ username }}
+
+          
+        </div>
+      </ng-container>
+      
+      <ng-template #notLoggedIn>
+        <a routerLink="/login" class="text-black"><i class="fas fa-user"></i></a>
+      </ng-template>
+      
+    </div>
+  </div>
+</header>
+  
+
+<router-outlet></router-outlet>
+

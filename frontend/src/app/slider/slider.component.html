@@ -1,0 +1,9 @@
+<div class="slider-banner"  style="margin-top: 100px;">
+  <div class="slides">
+    <img *ngFor="let image of images; let i = index"
+         [src]="image" 
+         [class.active]="i === currentIndex" />
+  </div>
+  <button class="prev" (click)="prevSlide()">&#10094;</button>
+  <button class="next" (click)="nextSlide()">&#10095;</button>
+</div>

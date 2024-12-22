@@ -1,0 +1,147 @@
+/* Tổng quan toàn bộ giỏ hàng */
+.shopping-cart {
+  width: 80%;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.shopping-cart h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Bảng sản phẩm */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+thead th {
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+tbody img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Cột giá và số lượng */
+td input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+td button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #007bff;
+  transition: background-color 0.3s ease;
+}
+
+td button:hover {
+  background-color: #0056b3;
+}
+
+td button:active {
+  background-color: #004080;
+}
+
+/* Các hành động phía dưới */
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cart-actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #28a745;
+  transition: background-color 0.3s ease;
+}
+
+.cart-actions button:hover {
+  background-color: #218838;
+}
+
+.cart-actions button:active {
+  background-color: #1e7e34;
+}
+
+/* Nút "Xóa" */
+td button:first-child {
+  background-color: #dc3545;
+}
+
+td button:first-child:hover {
+  background-color: #c82333;
+}
+
+td button:first-child:active {
+  background-color: #bd2130;
+}
+.total-amount {
+  text-align: center;
+  margin-top: 30px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.total-amount h3 {
+  font-size: 24px;
+  color: #ff6f61;
+  margin: 0;
+}
+
+.total-amount .amount {
+  font-size: 28px;
+  color: #28a745;
+  font-weight: 700;
+}
+
+.total-amount .currency {
+  font-size: 18px;
+  color: #6c757d;
+}

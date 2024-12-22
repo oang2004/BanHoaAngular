@@ -1,0 +1,44 @@
+    <app-slider></app-slider>
+
+    <div class="custom-container mt-1">
+      <h3 class="text-center">Sản Phẩm Nổi Bật</h3>
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of products">
+          <div class="custom-card">
+            <div class="sale-label" *ngIf="product.isSale">
+              <span>Sale</span>
+            </div>
+            <img [src]="product.imageUrl" class="custom-card-img-top" alt="Product image">
+    
+            <div class="custom-card-body">
+              <h5 class="custom-card-title">{{ product.name }}</h5>
+              <p class="custom-card-text">{{ product.price | currency: 'VND':'':'1.0-0' }} VND</p>
+              <button routerLink="/cart" class="custom-btn-block">Thêm vào giỏ hàng</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="feedback-title">Đánh Giá Từ Khách Hàng</h2>
+    <div class="feedback-container">
+      <div class="feedback-card">
+        <img src="../../assets/banner/1.png" alt="Đánh giá 1">
+      </div>
+      <div class="feedback-card">
+        <img src="../../assets/banner/2.png" alt="Đánh giá 2">
+      </div>
+      <div class="feedback-card">
+        <img src="../../assets/banner/3.png" alt="Đánh giá 3">
+      </div>
+      <div class="feedback-card">
+        <img src="../../assets/banner/4.png" alt="Đánh giá 4">
+      </div>
+      <div class="feedback-card">
+        <img src="../../assets/banner/5.png" alt="Đánh giá 5">
+      </div>
+    </div>
+    
+
+<app-footer></app-footer>
+

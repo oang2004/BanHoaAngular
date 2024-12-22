@@ -1,0 +1,15 @@
+<div class="custom-container mt-10" style="margin-top: 150px;">
+  <div class="row">
+    <div class="col-lg-6">
+      <img [src]="product.product_image" class="img-fluid" alt="{{ product.product_name }}">
+    </div>
+    <div class="col-lg-6">
+      <h3>{{ product.product_name }}</h3>
+      <p class="product-price">{{ product.product_price | currency:'VND':'symbol':'1.0-0' }}</p>
+      <p class="product-desc">{{ product.product_desc }}</p>
+      <button class="custom-btn-block" (click)="addToCart(product)">
+        Thêm vào giỏ hàng
+      </button>
+    </div>
+  </div>
+</div>
